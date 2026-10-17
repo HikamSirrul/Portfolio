@@ -28,7 +28,7 @@ const ToggleButton = ({ onClick, isShowingMore }) => (
       text-sm 
       font-medium 
       transition-all 
-      duration-300 
+      duration-400 
       ease-in-out
       flex 
       items-center 
