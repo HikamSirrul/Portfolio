@@ -77,7 +77,7 @@ const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
 const WORDS = ["Bachelor of Informatics Engineering", "Tech Enthusiast"];
-const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind", "Next.js", "Laravel", "Joblib", "MySQL", "PostgreSQL", "Python", "PHP", "Flask", "HTML5", "CSS3"];
+const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind", "Laravel", "Joblib", "MySQL", "PostgreSQL", "Python", "PHP", "Flask"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/HikamSirrul", label: "GitHub Profile" },
   { icon: Linkedin, link: "https://www.linkedin.com/in/hikamsrl/", label: "LinkedIn Profile" },
@@ -188,7 +188,7 @@ const Home = () => {
                   <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                     data-aos="fade-up"
                     data-aos-delay="1000">
-                    Menciptakan Website Yang Inovatif, Fungsional, dan User-Friendly untuk Solusi Digital.
+                    Menciptakan Website Yang Inovatif, Fungsional, dan Terintegrasi untuk Solusi Digital.
                   </p>
 
                   {/* Tech Stack */}

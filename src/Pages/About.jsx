@@ -238,9 +238,8 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-        Saya adalah mahasiswa Teknik Informatika yang berfokus pada pengembangan Fullstack. 
-Saya berfokus pada penciptaan pengalaman digital yang menarik dan selalu berupaya memberikan solusi terbaik dalam setiap proyek yang saya kerjakan.
-                  </p>
+        Saya adalah mahasiswa Teknik Informatika yang memiliki minat dalam pengembangan website.
+        Saya berupaya menciptakan aplikasi web yang responsif, fungsional, dan menarik serta memberikan solusi terbaik dalam setiap proyek yang saya kerjakan. </p>
 
                {/* Quote Section */}
       <div 
