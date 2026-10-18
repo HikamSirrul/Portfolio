@@ -265,7 +265,7 @@ Saya berfokus pada penciptaan pengalaman digital yang menarik dan selalu berupay
       </div>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
-              <a href="https://drive.google.com/file/d/1nNSCflQiw0y8NGUak9N0Mmmo2oJ6fmht/view?usp=sharing" className="w-full lg:w-auto">
+              <a href="https://drive.google.com/file/d/1gMloMjSSfjNEx5pDz0cU2zx2BU6DUDM0/view?usp=sharing" className="w-full lg:w-auto">
               <button 
                 data-aos="fade-up"
                 data-aos-duration="800"
