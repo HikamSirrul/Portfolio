@@ -77,7 +77,7 @@ const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
 const WORDS = ["Bachelor of Informatics Engineering", "Tech Enthusiast"];
-const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind"];
+const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind", "Next.js", "Laravel", "Joblib", "MySQL", "PostgreSQL", "Python", "PHP", "Flask", "HTML5", "CSS3"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/HikamSirrul", label: "GitHub Profile" },
   { icon: Linkedin, link: "https://www.linkedin.com/in/hikamsrl/", label: "LinkedIn Profile" },
