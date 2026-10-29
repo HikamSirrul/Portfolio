@@ -238,7 +238,7 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-        Saya adalah mahasiswa Teknik Informatika yang memiliki minat dalam pengembangan website.
+        Saya adalah lulusan S1 Teknik Informatika yang memiliki minat dalam pengembangan website.
         Saya berupaya menciptakan aplikasi web yang responsif, fungsional, dan menarik serta memberikan solusi terbaik dalam setiap proyek yang saya kerjakan. </p>
 
                {/* Quote Section */}
@@ -264,7 +264,7 @@ const AboutPage = () => {
       </div>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
-              <a href="https://drive.google.com/file/d/1gMloMjSSfjNEx5pDz0cU2zx2BU6DUDM0/view?usp=sharing" className="w-full lg:w-auto">
+              <a href="https://drive.google.com/file/d/1ZMdagGFfWQwGqJOIT_xXk1tyanO9QxBW/view?usp=sharing" className="w-full lg:w-auto">
               <button 
                 data-aos="fade-up"
                 data-aos-duration="800"
