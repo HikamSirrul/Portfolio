@@ -125,7 +125,7 @@ const AboutPage = () => {
       const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
       const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
       
-      const startDate = new Date("2021-11-06");
+      const startDate = new Date("2023-12-06");
       const today = new Date();
       const experience = today.getFullYear() - startDate.getFullYear() -
         (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
