@@ -91,11 +91,24 @@ footer{padding:10px 0 20px;color:#5c6680}
 #Portofolio .group.relative.w-full a:last-child{background:#176bff!important}
 #Contact>div:first-child{text-align:left!important}
 #Contact>div:first-child h2{font-size:clamp(42px,7vw,82px)!important;line-height:.9;letter-spacing:-.08em!important}
-#Contact #Contact .grid>div{background:rgba(255,255,255,.035)!important;border:1px solid rgba(59,130,255,.22)!important;border-radius:20px!important}
-#Contact #Contact h2{color:#fff}
+#Contact .grid>div{background:rgba(255,255,255,.035)!important;border:1px solid rgba(59,130,255,.22)!important;border-radius:20px!important}
+#Contact h2{color:#fff}
 #Contact button[type=submit]{background:#176bff!important;border-radius:999px!important}
 #Contact .bg-gradient-to-br.from-white\\/10{background:rgba(23,107,255,.07)!important}
 [data-theme="light"] #About .text-center.lg\\:mb-8 h2,[data-theme="light"] #Portofolio>div:first-child h2,[data-theme="light"] #Contact>div:first-child h2{color:#111827!important}
 [data-theme="light"] #About .grid.grid-cols-1.md\\:grid-cols-3>div>div,[data-theme="light"] #Portofolio .group.relative.w-full>div{background:#edf3ff!important;color:#111827!important}
 [data-theme="light"] #About .w-72.h-72{box-shadow:0 0 55px rgba(23,107,255,.18)}
 [data-theme="light"] #About .w-72.h-72 img{filter:grayscale(100%)}
+
+#Portofolio .container.mx-auto>.grid.grid-cols-1.md\\:grid-cols-2{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:0!important;align-items:center;padding:16px 0 30px}
+#Portofolio .container.mx-auto>.grid.grid-cols-1.md\\:grid-cols-2>div{position:relative;min-width:0;transition:transform .4s ease;filter:drop-shadow(0 20px 24px rgba(0,0,0,.28))}
+#Portofolio .container.mx-auto>.grid.grid-cols-1.md\\:grid-cols-2>div:nth-child(3n+1){z-index:1;transform:translateY(18px) rotate(-2deg) scale(.94)}
+#Portofolio .container.mx-auto>.grid.grid-cols-1.md\\:grid-cols-2>div:nth-child(3n+2){z-index:3;transform:translateY(-8px) scale(1.04)}
+#Portofolio .container.mx-auto>.grid.grid-cols-1.md\\:grid-cols-2>div:nth-child(3n){z-index:2;transform:translateY(20px) rotate(2deg) scale(.94)}
+#Portofolio .container.mx-auto>.grid.grid-cols-1.md\\:grid-cols-2>div:hover{z-index:8;transform:translateY(-10px) scale(1.06) rotate(0)}
+#Portofolio .group.relative.w-full>div{border-radius:16px!important;overflow:hidden}
+#Portofolio .group.relative.w-full .relative.p-5{padding:12px!important}
+#Portofolio .group.relative.w-full img{border-radius:10px}
+#Portofolio .grid.grid-cols-2.md\\:grid-cols-3.lg\\:grid-cols-6>div>div{border:1px solid rgba(59,130,255,.2);background:rgba(23,107,255,.07);border-radius:14px;padding:16px 10px}
+#Portofolio .grid.grid-cols-2.md\\:grid-cols-3.lg\\:grid-cols-6 img{width:46px;height:46px}
+@media(max-width:800px){#Portofolio .container.mx-auto>.grid.grid-cols-1.md\\:grid-cols-2{grid-template-columns:1fr!important;gap:18px!important}#Portofolio .container.mx-auto>.grid.grid-cols-1.md\\:grid-cols-2>div:nth-child(n){transform:none}#Portofolio .container.mx-auto>.grid.grid-cols-1.md\\:grid-cols-2>div:hover{transform:translateY(-4px)}}
