@@ -26,7 +26,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
             <div className="welcome-meta"><span><i /> DIGITAL CREATIVE PORTFOLIO</span><span>EST. 2026 <span className="welcome-meta-slash">/</span> INDONESIA</span></div>
             <div className="welcome-main">
               <motion.div className="welcome-symbol" initial={{ y: 18, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: .15, duration: .7 }}>
-                <Code2 size={21}/><span>HSA</span><Sparkles size={15}/>
+                <Code2 size={21}/><span>Hikamsrl</span><Sparkles size={15}/>
               </motion.div>
               <motion.p className="welcome-kicker" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .35 }}>HELLO, I'M HIKAM SIRRUL ARIFIN</motion.p>
               <div className="welcome-title">
