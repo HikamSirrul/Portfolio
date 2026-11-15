@@ -85,7 +85,7 @@ export default function Dashboard() {
 
   return (
     // Kunci: TIDAK pakai overflow-hidden di sini supaya scrollbar main bisa diklik
-    <div className="flex text-white" style={{ height: '100dvh' }}>
+    <div className="admin-shell flex min-h-screen" style={{ minHeight: '100dvh' }}>
       {/* Mobile overlay */}
       {sidebarOpen && (
         <div
@@ -96,7 +96,7 @@ export default function Dashboard() {
 
       {/* Sidebar - desktop: sticky, tinggi 100dvh */}
       <aside
-        className="hidden lg:flex w-60 shrink-0 flex-col border-r border-white/8 bg-white/3 backdrop-blur-xl"
+        className="admin-sidebar hidden lg:flex w-64 shrink-0 flex-col border-r border-white/8 backdrop-blur-xl"
         style={{ height: '100dvh', position: 'sticky', top: 0 }}
       >
         <SidebarContent />
@@ -104,7 +104,7 @@ export default function Dashboard() {
 
       {/* Sidebar - mobile drawer */}
       <aside
-        className={`fixed inset-y-0 left-0 z-30 w-60 flex flex-col border-r border-white/8 bg-[#0a0a1a] backdrop-blur-xl transition-transform duration-300 lg:hidden ${
+        className={`admin-sidebar fixed inset-y-0 left-0 z-30 w-64 flex flex-col border-r border-white/8 backdrop-blur-xl transition-transform duration-300 lg:hidden ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -112,7 +112,7 @@ export default function Dashboard() {
       </aside>
 
       {/* Main area */}
-      <div className="flex-1 flex flex-col min-w-0 min-h-0">
+      <div className="admin-main flex-1 flex flex-col min-w-0 min-h-0">
         {/* Mobile topbar */}
         <div className="lg:hidden flex items-center gap-3 px-4 py-3 border-b border-white/8 bg-white/3 backdrop-blur-xl shrink-0">
           <button
@@ -125,7 +125,11 @@ export default function Dashboard() {
         </div>
 
         {/* Hanya main yang overflow-y-auto — scrollbar bisa diklik normal */}
-        <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
+        <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-9">
+          <div className="mb-7 flex flex-wrap items-end justify-between gap-4">
+            <div><p className="text-[10px] uppercase tracking-[.22em] text-blue-400 font-bold mb-2">HSA / WORKSPACE</p><h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">Portfolio Manager<span className="text-blue-400">.</span></h1><p className="text-sm text-gray-400 mt-1">Manage your digital presence and published work.</p></div>
+            <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-[10px] tracking-wider text-gray-400"><span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,.7)]"/> SYSTEM ONLINE</div>
+          </div>
           <Routes>
             <Route index element={<Navigate to="projects" replace />} />
             <Route path="projects" element={<Projects />} />
