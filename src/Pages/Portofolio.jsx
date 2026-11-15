@@ -241,7 +241,7 @@ export default function FullWidthTabs() {
               left: 0,
               right: 0,
               bottom: 0,
-              background: "linear-gradient(180deg, rgba(139, 92, 246, 0.03) 0%, rgba(59, 130, 246, 0.03) 100%)",
+              background: "linear-gradient(180deg, rgba(23, 107, 255, 0.03) 0%, rgba(59, 130, 246, 0.03) 100%)",
               backdropFilter: "blur(10px)",
               zIndex: 0,
             },
@@ -269,7 +269,7 @@ export default function FullWidthTabs() {
                 borderRadius: "12px",
                 "&:hover": {
                   color: "#ffffff",
-                  backgroundColor: "rgba(139, 92, 246, 0.1)",
+                  backgroundColor: "rgba(23, 107, 255, 0.1)",
                   transform: "translateY(-2px)",
                   "& .lucide": {
                     transform: "scale(1.1) rotate(5deg)",
@@ -277,10 +277,10 @@ export default function FullWidthTabs() {
                 },
                 "&.Mui-selected": {
                   color: "#fff",
-                  background: "linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2))",
-                  boxShadow: "0 4px 15px -3px rgba(139, 92, 246, 0.2)",
+                  background: "linear-gradient(135deg, rgba(23, 107, 255, 0.2), rgba(59, 130, 246, 0.2))",
+                  boxShadow: "0 4px 15px -3px rgba(23, 107, 255, 0.2)",
                   "& .lucide": {
-                    color: "#a78bfa",
+                    color: "#8ab4ff",
                   },
                 },
               },
