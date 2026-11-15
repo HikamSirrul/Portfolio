@@ -4,7 +4,8 @@ import { supabase } from '../supabase'
 import Projects from './dashboard/Projects'
 import Certificates from './dashboard/Certificates'
 import Comments from './dashboard/Comments'
-import { FolderGit2, Award, MessageSquare, LogOut, LayoutDashboard, Menu } from 'lucide-react'
+import { FolderGit2, Award, MessageSquare, LogOut, LayoutDashboard, Menu, Sun, Moon } from 'lucide-react'
+import { usePortfolioTheme } from '../context/ThemeContext'
 
 const NAV_ITEMS = [
   { to: 'projects', label: 'Projects', icon: FolderGit2 },
@@ -16,6 +17,7 @@ export default function Dashboard() {
   const location = useLocation()
   const navigate = useNavigate()
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const { theme, toggleTheme } = usePortfolioTheme()
 
   const handleLogout = async () => {
     await supabase.auth.signOut()
@@ -27,9 +29,9 @@ export default function Dashboard() {
       {/* Logo */}
       <div className="flex items-center gap-3 px-1 shrink-0">
         <div className="relative">
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-50" />
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#1677ff] to-[#36bfff] rounded-xl blur opacity-50" />
           <div className="relative w-9 h-9 bg-[#030014] rounded-xl border border-white/15 flex items-center justify-center">
-            <LayoutDashboard className="w-4 h-4 text-indigo-400" />
+            <LayoutDashboard className="w-4 h-4 text-blue-400" />
           </div>
         </div>
         <div>
@@ -38,10 +40,12 @@ export default function Dashboard() {
         </div>
       </div>
 
+      <button onClick={toggleTheme} className="flex items-center justify-center gap-2 px-3 py-2 rounded-xl border border-white/10 text-gray-400 hover:text-blue-400 text-xs transition-colors" aria-label="Toggle color theme">{theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />} {theme === 'dark' ? 'Light mode' : 'Dark mode'}</button>
+
       {/* Badge */}
-      <div className="shrink-0 px-3 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 flex items-center gap-2">
-        <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
-        <span className="text-indigo-300 text-xs font-medium">Portfolio Manager</span>
+      <div className="shrink-0 px-3 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center gap-2">
+        <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+        <span className="text-blue-300 text-xs font-medium">Portfolio Manager</span>
       </div>
 
       {/* Nav */}
@@ -56,13 +60,13 @@ export default function Dashboard() {
               onClick={() => setSidebarOpen(false)}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 text-sm font-medium shrink-0 ${
                 active
-                  ? 'bg-gradient-to-r from-indigo-500/20 to-purple-500/15 border border-indigo-500/30 text-white'
+                  ? 'bg-gradient-to-r from-blue-500/20 to-blue-500/15 border border-blue-500/30 text-white'
                   : 'text-gray-400 hover:text-gray-200 hover:bg-white/5 border border-transparent'
               }`}
             >
-              <Icon className={`w-4 h-4 shrink-0 ${active ? 'text-indigo-400' : ''}`} />
+              <Icon className={`w-4 h-4 shrink-0 ${active ? 'text-blue-400' : ''}`} />
               {label}
-              {active && <span className="ml-auto w-1.5 h-1.5 rounded-full bg-indigo-400" />}
+              {active && <span className="ml-auto w-1.5 h-1.5 rounded-full bg-blue-400" />}
             </Link>
           )
         })}
