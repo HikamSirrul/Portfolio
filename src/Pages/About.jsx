@@ -21,7 +21,6 @@ const Header = memo(() => (
       data-aos-duration="800"
     >
       Transforming ideas into digital experiences
-      <Sparkles className="w-5 h-5 text-blue-400" />
     </p>
   </div>
 ));
