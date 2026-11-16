@@ -1,5 +1,5 @@
 import React, { useEffect, useState, memo, useMemo } from "react"
-import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, UserCheck } from "lucide-react"
+import { FileText, Code, Award, Globe, ArrowUpRight, UserCheck } from "lucide-react"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -20,7 +20,6 @@ const Header = memo(() => (
       data-aos="zoom-in-up"
       data-aos-duration="800"
     >
-      <Sparkles className="w-5 h-5 text-blue-400" />
       Transforming ideas into digital experiences
       <Sparkles className="w-5 h-5 text-blue-400" />
     </p>
