@@ -359,3 +359,34 @@ body{overflow-x:hidden}
  #Home.identity-hero .hero-giant-name{inset:8% 3% auto;height:48%;font-size:15vw}
  #Home.identity-hero .hero-word-two,#Home.identity-hero .hero-word-three{font-size:.8em}
 }
+
+
+/* === Projects section: complete light/dark theme support === */
+#Portofolio .text-slate-400{color:#a7afc0}
+#Portofolio .MuiAppBar-root{background:rgba(255,255,255,.035)!important;border-color:rgba(148,163,184,.2)!important}
+#Portofolio .MuiTab-root{color:#a7b3c7!important}
+#Portofolio .MuiTab-root.Mui-selected{color:#fff!important;background:rgba(23,107,255,.2)!important}
+#Portofolio .group.relative.w-full>div{background:linear-gradient(145deg,#111c30,#0b1220)!important;border-color:rgba(148,163,184,.18)!important}
+#Portofolio .group.relative.w-full h3{background-image:linear-gradient(90deg,#f8fafc,#8ab4ff)!important}
+#Portofolio .group.relative.w-full p{color:#cbd5e1!important}
+#Portofolio .group.relative.w-full a:last-child{background:rgba(255,255,255,.08)!important;color:#f8fafc!important}
+#Portofolio .group.relative.w-full a:first-child{color:#8ab4ff!important}
+#Portofolio .group.relative.w-full span.text-gray-500{color:#94a3b8!important}
+#Portofolio button[class*="text-slate-300"]{color:#cbd5e1!important;background:rgba(255,255,255,.06)!important;border-color:rgba(148,163,184,.2)!important}
+#Portofolio .grid.grid-cols-2.md\\:grid-cols-3.lg\\:grid-cols-6>div>div{background:rgba(30,41,59,.55)!important;border-color:rgba(148,163,184,.2)!important}
+#Portofolio .grid.grid-cols-2.md\\:grid-cols-3.lg\\:grid-cols-6 span{color:#cbd5e1!important}
+html[data-theme="light"] #Portofolio .text-slate-400{color:#58677e!important}
+html[data-theme="light"] #Portofolio .MuiAppBar-root{background:#f0f5fd!important;border-color:#d5e1f2!important}
+html[data-theme="light"] #Portofolio .MuiTab-root{color:#53647d!important}
+html[data-theme="light"] #Portofolio .MuiTab-root.Mui-selected{color:#fff!important;background:#176bff!important}
+html[data-theme="light"] #Portofolio .group.relative.w-full>div{background:#f2f6fd!important;border-color:#d5e1f2!important;box-shadow:0 12px 28px rgba(35,65,110,.1)!important}
+html[data-theme="light"] #Portofolio .group.relative.w-full h3{color:#172338!important;background-image:none!important;-webkit-text-fill-color:#172338!important}
+html[data-theme="light"] #Portofolio .group.relative.w-full p{color:#536176!important}
+html[data-theme="light"] #Portofolio .group.relative.w-full a:last-child{background:#e2ebfa!important;color:#174b9b!important}
+html[data-theme="light"] #Portofolio .group.relative.w-full a:first-child{color:#176bff!important}
+html[data-theme="light"] #Portofolio .group.relative.w-full span.text-gray-500{color:#718096!important}
+html[data-theme="light"] #Portofolio button[class*="text-slate-300"]{color:#334155!important;background:#fff!important;border-color:#d5e1f2!important}
+html[data-theme="light"] #Portofolio .grid.grid-cols-2.md\\:grid-cols-3.lg\\:grid-cols-6>div>div{background:#f0f5fd!important;border-color:#d5e1f2!important;box-shadow:0 8px 20px rgba(35,65,110,.07)!important}
+html[data-theme="light"] #Portofolio .grid.grid-cols-2.md\\:grid-cols-3.lg\\:grid-cols-6 span{color:#334155!important}
+#Home,#About,#Portofolio,#Contact{scroll-margin-top:84px}
+@media(max-width:520px){#Home,#About,#Portofolio,#Contact{scroll-margin-top:68px}}
