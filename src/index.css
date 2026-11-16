@@ -217,3 +217,16 @@ html[data-theme="dark"] .identity-nav .theme-toggle{background:#edf3ff;color:#17
 html[data-theme="light"] :is(.bg-indigo-500\/10,.bg-indigo-500\/15,.bg-blue-500\/10){background:rgba(23,107,255,.1)!important}
 html[data-theme="light"] :is(.text-indigo-300,.text-indigo-400,.text-blue-300,.text-blue-400){color:#176bff!important}
 html[data-theme="light"] :is(.border-indigo-500\/20,.border-indigo-500\/25,.border-indigo-500\/30){border-color:rgba(23,107,255,.22)!important}
+
+/* Welcome screen follows the selected global theme */
+.welcome-screen{background:radial-gradient(circle at 50% 45%,#183d80,#070b16 65%)}
+.welcome-card{background:#070a12;border-color:rgba(59,130,255,.25);box-shadow:0 0 100px rgba(23,107,255,.2);color:#f8fafc}
+.welcome-glow{background:rgba(23,107,255,.3)}
+.welcome-muted{color:#94a3b8}
+html[data-theme="light"] .welcome-screen{background:radial-gradient(circle at 50% 45%,#dce8ff,#f5f8ff 70%)}
+html[data-theme="light"] .welcome-card{background:#fff;border-color:rgba(23,107,255,.2);box-shadow:0 20px 80px rgba(35,75,145,.14);color:#111827}
+html[data-theme="light"] .welcome-muted{color:#64748b}
+html[data-theme="light"] .welcome-card .text-white{color:#fff!important}
+html[data-theme="light"] #Home .hero-cta,html[data-theme="light"] #Contact button[type="submit"],html[data-theme="light"] #Portofolio .MuiTab-root.Mui-selected{color:#fff!important}
+html[data-theme="light"] #About a[class*="bg-gradient"],html[data-theme="light"] #About button[class*="bg-gradient"]{color:#fff!important}
+html[data-theme="light"] .identity-nav .nav-brand{color:#182238}
