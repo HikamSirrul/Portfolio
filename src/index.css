@@ -230,3 +230,44 @@ html[data-theme="light"] .welcome-card .text-white{color:#fff!important}
 html[data-theme="light"] #Home .hero-cta,html[data-theme="light"] #Contact button[type="submit"],html[data-theme="light"] #Portofolio .MuiTab-root.Mui-selected{color:#fff!important}
 html[data-theme="light"] #About a[class*="bg-gradient"],html[data-theme="light"] #About button[class*="bg-gradient"]{color:#fff!important}
 html[data-theme="light"] .identity-nav .nav-brand{color:#182238}
+
+/* Latest hero positioning: portrait centered in the full hero canvas */
+#Home.identity-hero .hero-giant-name{inset:8% 2% auto;height:70%;font-size:clamp(92px,14.5vw,210px);display:flex;flex-direction:column;justify-content:center;gap:.06em}
+#Home.identity-hero .hero-word-top{text-align:left}
+#Home.identity-hero .hero-word-bottom{text-align:right;padding-right:0;font-size:.72em;letter-spacing:-.105em;white-space:nowrap}
+#Home.identity-hero .hero-portrait{left:50%;right:auto;transform:translateX(-50%);width:min(48%,610px);height:98%;bottom:0}
+#Home.identity-hero .hero-photo-glow{left:50%;right:auto;transform:translateX(-50%);top:14%;width:min(40vw,490px)}
+#Home.identity-hero .hero-orbit-large{left:50%;right:auto;transform:translateX(-50%);top:5%}
+#Home.identity-hero .hero-orbit-small{left:50%;right:auto;transform:translateX(-50%);top:20%}
+#Home.identity-hero .hero-copy{left:5%;bottom:8%;width:30%;z-index:6}
+#Home.identity-hero .hero-side-note{right:4%;bottom:8%;z-index:6}
+@media(max-width:800px){
+ #Home.identity-hero .hero-giant-name{inset:10% 2% auto;height:38%;font-size:clamp(66px,13vw,112px)}
+ #Home.identity-hero .hero-word-bottom{font-size:.72em}
+ #Home.identity-hero .hero-portrait{left:50%;right:auto;width:76%;height:72%;transform:translateX(-50%)}
+ #Home.identity-hero .hero-photo-glow{left:50%;right:auto;transform:translateX(-50%);width:70vw;top:30%}
+ #Home.identity-hero .hero-orbit-large{left:50%;right:auto;transform:translateX(-50%);width:78vw;top:22%}
+ #Home.identity-hero .hero-orbit-small{left:50%;right:auto;transform:translateX(-50%);width:55vw;top:31%}
+ #Home.identity-hero .hero-copy{left:5%;bottom:5%;width:56%}
+ #Home.identity-hero .hero-side-note{right:4%;bottom:6%;max-width:35%}
+}
+@media(max-width:480px){
+ #Home.identity-hero .hero-giant-name{font-size:13vw;top:10%}
+ #Home.identity-hero .hero-portrait{width:90%;height:66%}
+ #Home.identity-hero .hero-copy{width:62%}
+}
+/* Navbar theme-aware surfaces and current-section indicator */
+.identity-nav{z-index:100;position:fixed;left:50%;top:18px;transform:translateX(-50%);max-width:calc(100vw - 24px);border:1px solid var(--site-border);border-radius:999px;padding:7px;backdrop-filter:blur(18px);box-shadow:0 8px 30px rgba(0,0,0,.12);transition:background .25s,border-color .25s,color .25s}
+.identity-nav .nav-links{display:flex;align-items:center;justify-content:center;gap:5px}
+.identity-nav .nav-links>a{display:inline-flex;align-items:center;justify-content:center;padding:10px 17px;border-radius:999px;font-size:13px;font-weight:600;text-decoration:none;transition:background .2s,color .2s}
+html[data-theme="dark"] .identity-nav{background:rgba(9,14,26,.88);color:#e8eefb;border-color:rgba(120,155,210,.22)}
+html[data-theme="dark"] .identity-nav .nav-links>a{color:#b8c4d8}
+html[data-theme="dark"] .identity-nav .nav-links>a:hover{background:rgba(255,255,255,.08);color:#fff}
+html[data-theme="dark"] .identity-nav .nav-links>a.active{background:#176bff;color:#fff;box-shadow:0 4px 16px rgba(23,107,255,.32)}
+html[data-theme="light"] .identity-nav{background:rgba(255,255,255,.9);color:#172338;border-color:rgba(23,107,255,.16)}
+html[data-theme="light"] .identity-nav .nav-links>a{color:#536176}
+html[data-theme="light"] .identity-nav .nav-links>a:hover{background:#edf3fd;color:#172338}
+html[data-theme="light"] .identity-nav .nav-links>a.active{background:#176bff;color:#fff;box-shadow:0 4px 16px rgba(23,107,255,.2)}
+.identity-nav .theme-toggle{width:36px;height:36px;border:0;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;background:rgba(23,107,255,.12);color:#4d91ff;transition:background .2s,color .2s}
+.identity-nav .theme-toggle:hover{background:#176bff;color:#fff}
+@media(max-width:520px){.identity-nav{top:10px;padding:5px}.identity-nav .nav-links{gap:1px}.identity-nav .nav-links>a{padding:9px 11px;font-size:11px}.identity-nav .theme-toggle{width:32px;height:32px}}
