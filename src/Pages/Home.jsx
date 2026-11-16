@@ -1,6 +1,6 @@
 import React,{memo} from "react";
 import {Helmet} from "react-helmet-async";
-import {Github,Linkedin,Instagram,ArrowUpRight,Sparkles} from "lucide-react";
+import {Github,Linkedin,Instagram,ArrowUpRight} from "lucide-react";
 const Home=()=>(
  <>
   <Helmet>
@@ -24,7 +24,7 @@ const Home=()=>(
    <div className="hero-photo-glow"/>
    <div className="hero-portrait"><img src="/Foto.png" alt="Hikam Sirrul Arifin" fetchPriority="high"/></div>
    <div className="hero-copy">
-    <div className="hero-kicker"><Sparkles size={13}/> HI, I'M</div>
+    <div className="hero-kicker">HI, I'M</div>
     <h1>Hikam <span>Sirrul Arifin</span></h1>
     <p>Full-Stack Web Developer<br/>&amp; IT Enthusiast</p>
     <a className="hero-cta" href="#Portofolio">Explore My Works <ArrowUpRight size={15}/></a>
@@ -35,7 +35,6 @@ const Home=()=>(
     </div>
    </div>
    <div className="hero-side-note"><span className="hero-status-dot"/> Available for new opportunities<br/><small>Web Development · Software Engineering</small></div>
-   <span className="hero-spark hero-spark-a">✦</span><span className="hero-spark hero-spark-b">✧</span>
   </section>
  </>
 );
