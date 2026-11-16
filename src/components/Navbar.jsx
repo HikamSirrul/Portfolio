@@ -30,7 +30,9 @@ const Navbar=()=>{
   event.preventDefault();
   const target=document.querySelector(href);
   if(!target)return;
-  const navOffset=window.matchMedia("(max-width: 520px)").matches?68:84;\n  const targetTop=target.getBoundingClientRect().top+window.scrollY-navOffset;\n  window.scrollTo({top:Math.max(0,targetTop),behavior:"smooth"});
+  const navOffset=window.matchMedia("(max-width: 520px)").matches?68:84;
+  const targetTop=target.getBoundingClientRect().top+window.scrollY-navOffset;
+  window.scrollTo({top:Math.max(0,targetTop),behavior:"smooth"});
   setActiveSection(href.slice(1));
  };
  return <nav className="identity-nav" aria-label="Main navigation">
