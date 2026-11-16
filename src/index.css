@@ -324,3 +324,38 @@ html[data-theme="light"] .identity-nav .theme-toggle:hover{background:#e8f1ff!im
   #Home.identity-hero .hero-giant-name{inset:9% 1% auto;height:40%;font-size:15vw;line-height:.88}
   #Home.identity-hero .hero-word-two,#Home.identity-hero .hero-word-three{font-size:.78em}
 }
+
+
+/* === Continuous page composition: remove outer section-card containers === */
+#root{width:100%;max-width:none;margin:0 auto;padding:0;overflow:visible}
+#Home,#About,#Portofolio,#Contact{
+  margin:0!important;border:0!important;border-radius:0!important;
+  box-shadow:none!important;background:transparent!important;overflow:visible;
+}
+#Home.identity-hero{width:100%;max-width:none;border-radius:0!important;border:0!important;box-shadow:none!important;margin-top:0!important}
+#About,#Portofolio,#Contact{padding-top:clamp(76px,9vw,132px)!important;padding-bottom:clamp(76px,9vw,132px)!important}
+#Home::before,#About::before,#Portofolio::before,#Contact::before{opacity:.42}
+html,body{background:var(--site-bg)}
+body{overflow-x:hidden}
+@media(max-width:800px){#About,#Portofolio,#Contact{padding-top:78px!important;padding-bottom:78px!important}}
+
+/* Three staggered name lines: top-left, center, bottom-right */
+#Home.identity-hero .hero-giant-name{
+  inset:6% 3% auto;height:76%;display:block;
+  font-size:clamp(110px,15vw,218px);line-height:.82;letter-spacing:-.105em;
+}
+#Home.identity-hero .hero-word-line{position:absolute;display:block;width:auto;white-space:nowrap}
+#Home.identity-hero .hero-word-one{left:0;top:0;text-align:left;transform:none;font-size:1em}
+#Home.identity-hero .hero-word-two{left:50%;top:35%;text-align:center;transform:translateX(-50%);font-size:.88em;letter-spacing:-.095em}
+#Home.identity-hero .hero-word-three{right:0;top:70%;text-align:right;transform:none;font-size:.88em;letter-spacing:-.095em}
+#Home .hero-spark{display:none!important}
+@media(max-width:800px){
+ #Home.identity-hero .hero-giant-name{inset:8% 3% auto;height:54%;font-size:clamp(72px,14vw,118px);line-height:.86}
+ #Home.identity-hero .hero-word-one{left:0;top:0}
+ #Home.identity-hero .hero-word-two{left:50%;top:35%;transform:translateX(-50%)}
+ #Home.identity-hero .hero-word-three{right:0;top:70%}
+}
+@media(max-width:480px){
+ #Home.identity-hero .hero-giant-name{inset:8% 3% auto;height:48%;font-size:15vw}
+ #Home.identity-hero .hero-word-two,#Home.identity-hero .hero-word-three{font-size:.8em}
+}
