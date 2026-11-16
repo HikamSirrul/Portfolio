@@ -17,8 +17,9 @@ const Home=()=>(
    <div className="hero-backdrop-orbit hero-orbit-large"/>
    <div className="hero-backdrop-orbit hero-orbit-small"/>
    <div className="hero-giant-name" aria-hidden="true">
-    <span className="hero-word-top">HIKAM</span>
-    <span className="hero-word-bottom">SIRRUL ARIFIN</span>
+    <span className="hero-word-line hero-word-one">HIKAM</span>
+    <span className="hero-word-line hero-word-two">SIRRUL</span>
+    <span className="hero-word-line hero-word-three">ARIFIN</span>
    </div>
    <div className="hero-photo-glow"/>
    <div className="hero-portrait"><img src="/Foto.png" alt="Hikam Sirrul Arifin" fetchPriority="high"/></div>
