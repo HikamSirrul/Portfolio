@@ -5,9 +5,14 @@ const Navbar=()=>{
  const [activeSection,setActiveSection]=useState("Home");
  const [theme,setTheme]=useState(()=>localStorage.getItem("portfolio-theme")||"dark");
  const navItems=[{href:"#Home",label:"Home"},{href:"#About",label:"About"},{href:"#Portofolio",label:"Works"},{href:"#Contact",label:"Contact"}];
- useEffect(()=>{document.documentElement.dataset.theme=theme;localStorage.setItem("portfolio-theme",theme)},[theme]);
  useEffect(()=>{
-  const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)setActiveSection(entry.target.id)})},{rootMargin:"-35% 0px -55% 0px"});
+  document.documentElement.dataset.theme=theme;
+  document.body.dataset.theme=theme;
+  localStorage.setItem("portfolio-theme",theme);
+  window.dispatchEvent(new CustomEvent("portfolioThemeChange",{detail:theme}));
+ },[theme]);
+ useEffect(()=>{
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)setActiveSection(entry.target.id)}),{rootMargin:"-35% 0px -55% 0px"});
   navItems.forEach(item=>{const el=document.querySelector(item.href);if(el)observer.observe(el)});
   return()=>observer.disconnect();
  },[]);
