@@ -36,9 +36,9 @@ const ProfileImage = memo(() => (
     >
       {/* Optimized gradient backgrounds with reduced complexity for mobile */}
       <div className="absolute -inset-6 opacity-[25%] z-0 hidden sm:block">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-500 to-purple-600 rounded-full blur-2xl animate-spin-slower" />
-        <div className="absolute inset-0 bg-gradient-to-l from-blue-400 via-rose-500 to-pink-600 rounded-full blur-2xl animate-pulse-slow opacity-50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-blue-600 via-cyan-500 to-teal-400 rounded-full blur-2xl animate-float opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 rounded-full blur-2xl animate-spin-slower" />
+        <div className="absolute inset-0 bg-gradient-to-l from-blue-400 via-blue-500 to-blue-600 rounded-full blur-2xl animate-pulse-slow opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-600 via-cyan-500 to-cyan-400 rounded-full blur-2xl animate-float opacity-50" />
       </div>
 
       <div className="relative">
