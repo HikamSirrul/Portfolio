@@ -1062,3 +1062,72 @@ html[data-theme="light"] #Home.identity-hero .hero-social{color:#27364f}
     transform:translateX(-50%);
   }
 }
+
+
+/* === Final Home hero stacking and face-aligned identity === */
+#Home.identity-hero .hero-backdrop-orbit{
+  display:block!important;
+  position:absolute;
+  border:1px solid rgba(59,130,255,.55);
+  border-radius:50%;
+  pointer-events:none;
+}
+#Home.identity-hero .hero-orbit-large{
+  z-index:0;
+  width:min(47vw,570px);
+  aspect-ratio:1;
+  left:50%;
+  right:auto;
+  top:5%;
+  transform:translateX(-50%);
+  box-shadow:0 0 65px rgba(23,107,255,.18),inset 0 0 65px rgba(23,107,255,.1);
+}
+#Home.identity-hero .hero-orbit-small{
+  z-index:0;
+  width:min(30vw,350px);
+  aspect-ratio:1;
+  left:50%;
+  right:auto;
+  top:17%;
+  transform:translateX(-50%);
+  border-color:rgba(59,130,255,.28);
+}
+#Home.identity-hero .hero-giant-name{
+  z-index:2!important;
+  top:57%!important;
+  transform:translateY(-50%);
+}
+#Home.identity-hero .hero-portrait{
+  z-index:3!important;
+}
+#Home.identity-hero .hero-portrait-hover,
+#Home.identity-hero .hero-portrait-hover img{
+  position:relative;
+  z-index:3;
+}
+@media(max-width:800px){
+  #Home.identity-hero .hero-orbit-large{
+    width:78vw;
+    top:18%;
+  }
+  #Home.identity-hero .hero-orbit-small{
+    width:55vw;
+    top:27%;
+  }
+  #Home.identity-hero .hero-giant-name{
+    top:55%!important;
+  }
+}
+@media(max-width:520px){
+  #Home.identity-hero .hero-orbit-large{
+    width:88vw;
+    top:19%;
+  }
+  #Home.identity-hero .hero-orbit-small{
+    width:62vw;
+    top:27%;
+  }
+  #Home.identity-hero .hero-giant-name{
+    top:51%!important;
+  }
+}
