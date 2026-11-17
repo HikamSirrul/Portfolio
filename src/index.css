@@ -445,3 +445,30 @@ html[data-theme="light"] .project-detail-page .bg-white\\/\\[0\\.02\\] h3{color:
 html[data-theme="light"] .project-detail-page .bg-white\\/\\[0\\.02\\] li:hover{background:#dce8fb!important}
 html[data-theme="light"] .project-detail-page .bg-white\\/\\[0\\.02\\] li:hover span{color:#17243a!important}
 @media(max-width:640px){#Home.identity-hero .hero-portrait img{animation-duration:8s}#Home.identity-hero::after{width:38%}}
+
+/* Robust light-mode contrast overrides for utility-class project detail markup */
+html[data-theme="light"] .project-detail-page [class~="text-white"],
+html[data-theme="light"] .project-detail-page [class~="text-white/90"]{color:#17243a!important}
+html[data-theme="light"] .project-detail-page [class~="text-gray-300"],
+html[data-theme="light"] .project-detail-page [class~="text-gray-300/90"]{color:#3d4c63!important}
+html[data-theme="light"] .project-detail-page [class~="text-gray-400"]{color:#5c6b82!important}
+html[data-theme="light"] .project-detail-page [class~="bg-[#0a0a1a]"],
+html[data-theme="light"] .project-detail-page [class~="bg-white/5"],
+html[data-theme="light"] .project-detail-page [class~="bg-white/[0.02]"]{background:#e8effb!important}
+html[data-theme="light"] .project-detail-page [class~="border-white/10"],
+html[data-theme="light"] .project-detail-page [class~="border-white/20"]{border-color:#c7d5ea!important}
+html[data-theme="light"] .project-detail-page [class~="text-blue-300"],
+html[data-theme="light"] .project-detail-page [class~="text-blue-300/90"]{color:#1454c5!important}
+html[data-theme="light"] .project-detail-page [class~="text-blue-200"]{color:#174b9d!important}
+html[data-theme="light"] .project-detail-page [class~="text-purple-300"]{color:#5b43b5!important}
+html[data-theme="light"] .project-detail-page [class~="text-purple-200"]{color:#49369c!important}
+html[data-theme="light"] .project-detail-page [class~="text-blue-400"]{color:#176bff!important}
+html[data-theme="light"] .project-detail-page [class~="bg-blue-500/20"]{background:rgba(23,107,255,.13)!important}
+html[data-theme="light"] .project-detail-page [class~="bg-purple-500/20"]{background:rgba(105,78,190,.13)!important}
+html[data-theme="light"] .project-detail-page a.group{background:#e8effb!important;border-color:#b9cbea!important;color:#174b9d!important}
+html[data-theme="light"] .project-detail-page a.group:hover{background:#dce8fb!important}
+html[data-theme="light"] .project-detail-page a.group span{color:inherit!important}
+html[data-theme="light"] .project-detail-page li span{color:#34445d!important}
+html[data-theme="light"] .project-detail-page [class~="bg-white/[0.02]"] h3{color:#17243a!important}
+html[data-theme="light"] .project-detail-page [class~="bg-white/[0.02]"] li:hover{background:#dce8fb!important}
+html[data-theme="light"] .project-detail-page [class~="bg-white/[0.02]"] li:hover span{color:#17243a!important}
