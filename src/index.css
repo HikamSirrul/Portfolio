@@ -782,3 +782,30 @@ body,
   background: var(--home-canvas-image) !important;
   opacity: 1 !important;
 }
+
+
+/* === Final canvas parity: match About/Works/Contact to the Home hero ===
+   The earlier theme-panel rules had higher specificity than the generic
+   canvas rule, so About kept its own flat panel color. Apply the Home
+   canvas directly to each public section in both themes. */
+html[data-theme="dark"] #About,
+html[data-theme="dark"] #Portofolio,
+html[data-theme="dark"] #Contact {
+  background-color: #05060c !important;
+  background-image: var(--home-canvas-image) !important;
+}
+
+html[data-theme="light"] #About,
+html[data-theme="light"] #Portofolio,
+html[data-theme="light"] #Contact {
+  background-color: #f9fbff !important;
+  background-image: var(--home-canvas-image) !important;
+}
+
+/* These sections now paint the shared gradient on their own background;
+   remove the old behind-the-panel pseudo layers to avoid competing glows. */
+#About::before,
+#Portofolio::before,
+#Contact::before {
+  content: none !important;
+}
