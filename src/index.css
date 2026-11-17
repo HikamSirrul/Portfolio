@@ -1152,3 +1152,38 @@ html[data-theme="light"] #Home.identity-hero .hero-social{color:#27364f}
     font-size:clamp(46px,12.5vw,68px)!important;
   }
 }
+
+
+/* === Hard reset hero title positioning (override reveal animation offsets) === */
+#Home.identity-hero .hero-giant-name{
+  position:absolute!important;
+  inset-block-start:50%!important;
+  inset-block-end:auto!important;
+  top:50%!important;
+  bottom:auto!important;
+  margin-block:0!important;
+  transform:translateY(-50%)!important;
+  translate:0 0!important;
+  animation:none!important;
+  font-size:clamp(68px,17vw,248px)!important;
+  line-height:.84!important;
+}
+#Home.identity-hero .hero-giant-name .hero-word-line{
+  animation:none!important;
+  translate:none!important;
+  transform:none!important;
+}
+@media(max-width:800px){
+  #Home.identity-hero .hero-giant-name{
+    top:50%!important;
+    inset-block-start:50%!important;
+    font-size:clamp(58px,14.5vw,120px)!important;
+  }
+}
+@media(max-width:520px){
+  #Home.identity-hero .hero-giant-name{
+    top:50%!important;
+    inset-block-start:50%!important;
+    font-size:clamp(46px,12vw,66px)!important;
+  }
+}
