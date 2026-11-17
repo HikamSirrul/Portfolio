@@ -128,14 +128,7 @@ const ContactPage = () => {
             Hubungi Saya
           </span>
         </h2>
-        <p
-          data-aos="fade-up"
-          data-aos-duration="1100"
-          className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2"
-        >
-          Punya pertanyaan? Kirimi saya pesan, dan saya akan segera membalasnya.
-        </p>
-      </div>
+</div>
 
       <div
         className="h-auto py-10 flex items-center justify-center 2xl:pr-[3.1%] lg:pr-[3.8%]  md:px-0"
