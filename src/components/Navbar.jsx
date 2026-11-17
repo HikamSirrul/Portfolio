@@ -28,13 +28,25 @@ const Navbar=()=>{
  },[]);
  const scrollTo=(event,href)=>{
   event.preventDefault();
-  const target=document.getElementById(href.slice(1));
-  if(!target)return;
-  const navOffset=window.matchMedia("(max-width: 520px)").matches?76:96;
-  const targetTop=target.getBoundingClientRect().top+window.scrollY-navOffset;
-  setActiveSection(href.slice(1));
+  const sectionId=href.slice(1);
+  setActiveSection(sectionId);
   window.history.replaceState(null,"",href);
-  window.scrollTo({top:Math.max(0,targetTop),behavior:"smooth"});
+
+  // Works and Contact are lazy-loaded; wait briefly for their section to mount.
+  const revealSection=(attempt=0)=>{
+   const target=document.getElementById(sectionId);
+   if(!target){
+    if(attempt<40)window.setTimeout(()=>revealSection(attempt+1),100);
+    return;
+   }
+   target.scrollIntoView({behavior:"smooth",block:"start"});
+   // Re-align once layout/async content has settled, without jumping to the heading only.
+   window.setTimeout(()=>{
+    const current=document.getElementById(sectionId);
+    if(current)current.scrollIntoView({behavior:"smooth",block:"start"});
+   },450);
+  };
+  revealSection();
  };
  return <nav className="identity-nav" aria-label="Main navigation">
   <div className="nav-links">
