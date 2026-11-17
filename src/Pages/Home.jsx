@@ -22,7 +22,14 @@ const Home=()=>(
     <span className="hero-word-line hero-word-three">ARIFIN</span>
    </div>
    <div className="hero-photo-glow"/>
-   <div className="hero-portrait"><img src="/Foto_Nobg.png" alt="Hikam Sirrul Arifin" fetchPriority="high"/></div>
+   <div className="hero-portrait">
+    <div className="hero-portrait-hover">
+     <span className="hero-portrait-overlay hero-portrait-overlay-base"/>
+     <span className="hero-portrait-overlay hero-portrait-overlay-blue"/>
+     <img src="/Foto_Nobg.png" alt="Hikam Sirrul Arifin" fetchPriority="high"/>
+     <span className="hero-portrait-shine" aria-hidden="true"/>
+    </div>
+   </div>
    <div className="hero-copy">
     <p>Full-Stack Web Developer<br/>&amp; IT Enthusiast</p>
     <a className="hero-cta" href="#Portofolio">Explore My Works <ArrowUpRight size={15}/></a>
