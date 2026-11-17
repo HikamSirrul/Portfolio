@@ -964,3 +964,101 @@ html[data-theme="light"] #Home.identity-hero .hero-social{color:#27364f}
 @media(prefers-reduced-motion:reduce){
   #Home.identity-hero .hero-social a{transition:none}
 }
+
+
+/* === Home hero refinement: centered portrait and full-width centered name === */
+#Home.identity-hero{
+  overflow:hidden;
+}
+#Home.identity-hero .hero-backdrop-orbit,
+#Home.identity-hero .hero-photo-glow{
+  display:none!important;
+}
+#Home.identity-hero .hero-giant-name{
+  position:absolute;
+  z-index:2;
+  top:50%;
+  left:0;
+  right:0;
+  inset:auto 0 auto;
+  width:100%;
+  height:auto;
+  padding:0 1.2%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transform:translateY(-50%);
+  font-size:clamp(48px,15.5vw,230px);
+  line-height:.88;
+  letter-spacing:-.095em;
+  white-space:nowrap;
+  text-align:center;
+}
+#Home.identity-hero .hero-word-line{
+  display:block;
+  width:100%;
+  text-align:center;
+}
+#Home.identity-hero .hero-portrait{
+  position:absolute;
+  z-index:3;
+  left:50%;
+  right:auto;
+  bottom:0;
+  top:auto;
+  transform:translateX(-50%);
+  width:min(55%,700px);
+  height:88%;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+#Home.identity-hero .hero-portrait-hover{
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+#Home.identity-hero .hero-portrait img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center bottom;
+}
+#Home.identity-hero .hero-copy,
+#Home.identity-hero .hero-side-note{
+  z-index:5;
+}
+@media(max-width:800px){
+  #Home.identity-hero .hero-giant-name{
+    top:48%;
+    font-size:clamp(54px,13.8vw,112px);
+    padding:0 1%;
+    letter-spacing:-.09em;
+  }
+  #Home.identity-hero .hero-portrait{
+    left:50%;
+    right:auto;
+    width:72%;
+    height:76%;
+    bottom:0;
+    transform:translateX(-50%);
+  }
+}
+@media(max-width:520px){
+  #Home.identity-hero .hero-giant-name{
+    top:43%;
+    font-size:clamp(43px,11.2vw,60px);
+    letter-spacing:-.08em;
+    padding:0 1%;
+  }
+  #Home.identity-hero .hero-portrait{
+    left:50%;
+    right:auto;
+    width:94%;
+    height:67%;
+    bottom:12%;
+    transform:translateX(-50%);
+  }
+}
