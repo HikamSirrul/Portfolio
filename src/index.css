@@ -472,3 +472,21 @@ html[data-theme="light"] .project-detail-page li span{color:#34445d!important}
 html[data-theme="light"] .project-detail-page [class~="bg-white/[0.02]"] h3{color:#17243a!important}
 html[data-theme="light"] .project-detail-page [class~="bg-white/[0.02]"] li:hover{background:#dce8fb!important}
 html[data-theme="light"] .project-detail-page [class~="bg-white/[0.02]"] li:hover span{color:#17243a!important}
+
+
+/* Full-section navigation: prevent clipping and account for the fixed navbar. */
+html{scroll-behavior:smooth}
+#Home,#About,#Portofolio,#Contact{scroll-margin-top:112px}
+#About,#Portofolio,#Contact{
+ height:auto!important;
+ min-height:0!important;
+ max-height:none!important;
+ overflow:visible!important;
+}
+#About>* ,#Portofolio>* ,#Contact>*{max-height:none}
+@media(max-width:520px){
+ #Home,#About,#Portofolio,#Contact{scroll-margin-top:78px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+}
