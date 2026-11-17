@@ -1200,3 +1200,10 @@ html[data-theme="light"] #Home.identity-hero .hero-social{color:#27364f}
     font-size:clamp(46px,12vw,66px)!important;
   }
 }
+
+
+/* === Approved hero refinement: remove blue bloom from the left edge and top === */
+#Home.identity-hero::before{
+  background:none!important;
+  opacity:0!important;
+}
