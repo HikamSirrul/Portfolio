@@ -5,13 +5,13 @@ import "./index.css";
 import Navbar from "./components/Navbar";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
+import Portofolio from "./Pages/Portofolio";
+import ContactPage from "./Pages/Contact";
 import Footer from "./components/Footer";
 import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 
-const Portofolio=lazy(()=>import("./Pages/Portofolio"));
-const ContactPage=lazy(()=>import("./Pages/Contact"));
 const ProjectDetails=lazy(()=>import("./components/ProjectDetail"));
 const WelcomeScreen=lazy(()=>import("./Pages/WelcomeScreen"));
 const NotFoundPage=lazy(()=>import("./Pages/404"));
@@ -19,8 +19,13 @@ const NotFoundPage=lazy(()=>import("./Pages/404"));
 const LandingPage=({showWelcome,setShowWelcome})=><>
  {showWelcome&&<Suspense fallback={null}><WelcomeScreen onLoadingComplete={()=>setShowWelcome(false)}/></Suspense>}
  {!showWelcome&&<>
-  <Navbar/><Home/><About/>
-  <Suspense fallback={<div className="h-20"/>}><Portofolio/><ContactPage/></Suspense>
+  <Navbar/>
+  <main>
+   <Home/>
+   <About/>
+   <Portofolio/>
+   <ContactPage/>
+  </main>
   <Footer/>
  </>}
 </>;

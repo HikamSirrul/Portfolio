@@ -22,7 +22,7 @@ const Home=()=>(
     <span className="hero-word-line hero-word-three">ARIFIN</span>
    </div>
    <div className="hero-photo-glow"/>
-   <div className="hero-portrait"><img src="/Foto.png" alt="Hikam Sirrul Arifin" fetchPriority="high"/></div>
+   <div className="hero-portrait"><img src="/Foto_Nobg.png" alt="Hikam Sirrul Arifin" fetchPriority="high"/></div>
    <div className="hero-copy">
     <div className="hero-kicker">HI, I'M</div>
     <h1>Hikam <span>Sirrul Arifin</span></h1>

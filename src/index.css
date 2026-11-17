@@ -490,3 +490,26 @@ html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){
  html{scroll-behavior:auto}
 }
+
+
+/* Native anchor navigation: all destination sections are rendered up-front. */
+html{
+ scroll-behavior:smooth;
+ scroll-padding-top:112px;
+}
+#Home,#About,#Portofolio,#Contact{
+ scroll-margin-top:112px;
+}
+#About,#Portofolio,#Contact{
+ height:auto!important;
+ min-height:0!important;
+ max-height:none!important;
+ overflow:visible!important;
+}
+@media(max-width:520px){
+ html{scroll-padding-top:78px}
+ #Home,#About,#Portofolio,#Contact{scroll-margin-top:78px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+}
