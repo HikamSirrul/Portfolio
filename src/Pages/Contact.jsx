@@ -35,8 +35,8 @@ const ContactPage = () => {
     setIsSubmitting(true);
 
     Swal.fire({
-      title: 'Mengirim Pesan...',
-      html: 'Harap tunggu selagi kami mengirim pesan Anda',
+      title: 'Sending Message...',
+      html: 'Please wait while your message is being sent.',
       allowOutsideClick: false,
       didOpen: () => {
         Swal.showLoading();
@@ -52,7 +52,7 @@ const ContactPage = () => {
       submitData.append('name', formData.name);
       submitData.append('email', formData.email);
       submitData.append('message', formData.message);
-      submitData.append('_subject', 'Pesan Baru dari Website Portfolio');
+      submitData.append('_subject', 'New Message from Portfolio Website');
       submitData.append('_captcha', 'false'); // Nonaktifkan captcha
       submitData.append('_template', 'table'); // Format email sebagai tabel
 
@@ -64,8 +64,8 @@ const ContactPage = () => {
 
      
       Swal.fire({
-        title: 'Berhasil!',
-        text: 'Pesan Anda telah berhasil terkirim!',
+        title: 'Success!',
+        text: 'Your message has been sent successfully!',
         icon: 'success',
         confirmButtonColor: '#176bff',
         timer: 2000,
@@ -81,8 +81,8 @@ const ContactPage = () => {
     } catch (error) {
       if (error.request && error.request.status === 0) {
         Swal.fire({
-          title: 'Berhasil!',
-          text: 'Pesan Anda telah berhasil terkirim!',
+          title: 'Success!',
+          text: 'Your message has been sent successfully!',
           icon: 'success',
           confirmButtonColor: '#176bff',
           timer: 2000,
@@ -96,8 +96,8 @@ const ContactPage = () => {
         });
       } else {
         Swal.fire({
-          title: 'Gagal!',
-          text: 'Terjadi kesalahan. Silakan coba lagi nanti.',
+          title: 'Failed!',
+          text: 'Something went wrong. Please try again later.',
           icon: 'error',
           confirmButtonColor: '#176bff'
         });
@@ -125,7 +125,7 @@ const ContactPage = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Hubungi Saya
+            Contact Me
           </span>
         </h2>
 </div>
@@ -141,10 +141,10 @@ const ContactPage = () => {
             <div className="flex justify-between items-start mb-8">
               <div>
                 <h2 className="text-4xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-[#176bff] to-[#3b82ff]">
-                  Hubungi
+                  Get in Touch
                 </h2>
                 <p className="text-gray-400">
-                  Ada yang ingin didiskusikan? Kirim saya pesan dan mari kita bicara.
+                  Have something in mind? Send me a message and let's talk.
                 </p>
               </div>
               <Share2 className="w-10 h-10 text-[#176bff] opacity-50" />
@@ -163,7 +163,7 @@ const ContactPage = () => {
                 <input
                   type="text"
                   name="name"
-                  placeholder="Nama Anda"
+                  placeholder="Your Name"
                   value={formData.name}
                   onChange={handleChange}
                   disabled={isSubmitting}
@@ -180,7 +180,7 @@ const ContactPage = () => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="Email Anda"
+                  placeholder="Your Email"
                   value={formData.email}
                   onChange={handleChange}
                   disabled={isSubmitting}
@@ -196,7 +196,7 @@ const ContactPage = () => {
                 <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#176bff] transition-colors" />
                 <textarea
                   name="message"
-                  placeholder="Pesan Anda"
+                  placeholder="Your Message"
                   value={formData.message}
                   onChange={handleChange}
                   disabled={isSubmitting}
@@ -212,7 +212,7 @@ const ContactPage = () => {
                 className="w-full bg-gradient-to-r from-[#176bff] to-[#3b82ff] text-white py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#176bff]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 <Send className="w-5 h-5" />
-                {isSubmitting ? 'Mengirim...' : 'Kirim Pesan'}
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
 
