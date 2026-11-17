@@ -35,12 +35,6 @@ const Navbar=()=>{
   setActiveSection(href.slice(1));
   window.history.replaceState(null,"",href);
   window.scrollTo({top:Math.max(0,targetTop),behavior:"smooth"});
-  window.setTimeout(()=>{
-   const refreshed=document.getElementById(href.slice(1));
-   if(!refreshed)return;
-   const refreshedTop=refreshed.getBoundingClientRect().top+window.scrollY-navOffset;
-   window.scrollTo({top:Math.max(0,refreshedTop),behavior:"smooth"});
-  },180);
  };
  return <nav className="identity-nav" aria-label="Main navigation">
   <div className="nav-links">
