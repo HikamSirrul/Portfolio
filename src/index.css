@@ -513,3 +513,10 @@ html{
 @media(prefers-reduced-motion:reduce){
  html{scroll-behavior:auto}
 }
+
+
+/* Restore natural document scrolling and anchor navigation */
+html,body,#root{height:auto!important;min-height:100%;}
+html,body{overflow-y:auto!important;overflow-x:hidden!important;}
+#Home,#About,#Portofolio,#Contact{scroll-margin-top:112px;}
+@media(max-width:520px){#Home,#About,#Portofolio,#Contact{scroll-margin-top:76px;}}
