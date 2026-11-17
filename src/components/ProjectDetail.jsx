@@ -110,8 +110,8 @@ const handleGithubClick = (githubLink) => {
       text: "Maaf, source code untuk proyek ini bersifat privat.",
       confirmButtonText: "Mengerti",
       confirmButtonColor: "#3085d6",
-      background: "#030014",
-      color: "#ffffff",
+      background: document.documentElement.dataset.theme === "light" ? "#ffffff" : "#030014",
+      color: document.documentElement.dataset.theme === "light" ? "#17243a" : "#ffffff",
     });
     return false;
   }
