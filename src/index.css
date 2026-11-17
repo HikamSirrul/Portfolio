@@ -1131,3 +1131,24 @@ html[data-theme="light"] #Home.identity-hero .hero-social{color:#27364f}
     top:51%!important;
   }
 }
+
+
+/* === Precise hero placement: vertically centered and larger === */
+#Home.identity-hero .hero-giant-name{
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  font-size:clamp(64px,18vw,260px)!important;
+  line-height:.86;
+}
+@media(max-width:800px){
+  #Home.identity-hero .hero-giant-name{
+    top:50%!important;
+    font-size:clamp(58px,15vw,124px)!important;
+  }
+}
+@media(max-width:520px){
+  #Home.identity-hero .hero-giant-name{
+    top:50%!important;
+    font-size:clamp(46px,12.5vw,68px)!important;
+  }
+}
