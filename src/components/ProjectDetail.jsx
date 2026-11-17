@@ -125,6 +125,10 @@ const ProjectDetails = () => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   useEffect(() => {
+    const savedTheme = localStorage.getItem("portfolio-theme") || "dark";
+    document.documentElement.dataset.theme = savedTheme;
+    document.body.dataset.theme = savedTheme;
+    document.documentElement.style.colorScheme = savedTheme;
     window.scrollTo(0, 0);
     const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
     // Cari project berdasarkan slug yang di-generate dari Title
@@ -199,7 +203,7 @@ const ProjectDetails = () => {
         `}</script>
       </Helmet>
 
-      <div className="min-h-screen bg-[#030014] px-[2%] sm:px-0 relative overflow-hidden">
+      <div className="project-detail-page min-h-screen bg-[#030014] px-[2%] sm:px-0 relative overflow-hidden">
         <div className="fixed inset-0">
           <div className="absolute -inset-[10px] opacity-20">
             <div className="absolute top-0 -left-4 w-72 md:w-96 h-72 md:h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" />
