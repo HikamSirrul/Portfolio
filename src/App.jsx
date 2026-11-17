@@ -1,5 +1,5 @@
-import React,{useEffect,useState,lazy,Suspense} from "react";
-import {BrowserRouter,Routes,Route,Outlet,useLocation} from "react-router-dom";
+import React,{useState,Suspense,lazy} from "react";
+import {BrowserRouter,Routes,Route,Navigate} from "react-router-dom";
 import {HelmetProvider} from "react-helmet-async";
 import "./index.css";
 import Navbar from "./components/Navbar";
@@ -17,17 +17,17 @@ const WelcomeScreen=lazy(()=>import("./Pages/WelcomeScreen"));
 const NotFoundPage=lazy(()=>import("./Pages/404"));
 
 function PublicLayout({showWelcome,setShowWelcome}){
- const location=useLocation();
- useEffect(()=>{
-  window.scrollTo({top:0,left:0,behavior:"instant"});
- },[location.pathname]);
-
- if(showWelcome&&location.pathname==="/"){
+ if(showWelcome){
   return <Suspense fallback={null}><WelcomeScreen onLoadingComplete={()=>setShowWelcome(false)}/></Suspense>;
  }
  return <>
   <Navbar/>
-  <main className="public-page-content"><Outlet/></main>
+  <main className="public-page-content">
+   <Home/>
+   <About/>
+   <Portofolio/>
+   <ContactPage/>
+  </main>
   <Footer/>
  </>;
 }
@@ -37,12 +37,10 @@ const ProjectPageLayout=()=> <><Suspense fallback={<div className="min-h-screen"
 function App(){
  const [showWelcome,setShowWelcome]=useState(true);
  return <HelmetProvider><BrowserRouter><Routes>
-  <Route element={<PublicLayout showWelcome={showWelcome} setShowWelcome={setShowWelcome}/>}>
-   <Route index element={<Home/>}/>
-   <Route path="about" element={<About/>}/>
-   <Route path="works" element={<Portofolio/>}/>
-   <Route path="contact" element={<ContactPage/>}/>
-  </Route>
+  <Route path="/" element={<PublicLayout showWelcome={showWelcome} setShowWelcome={setShowWelcome}/>}/>
+  <Route path="/about" element={<Navigate to="/#About" replace/>}/>
+  <Route path="/works" element={<Navigate to="/#Portofolio" replace/>}/>
+  <Route path="/contact" element={<Navigate to="/#Contact" replace/>}/>
   <Route path="/project/:slug" element={<ProjectPageLayout/>}/>
   <Route path="/login" element={<Login/>}/>
   <Route path="/dashboard/*" element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/>
