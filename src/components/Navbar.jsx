@@ -1,12 +1,11 @@
 import React,{useEffect,useState} from "react";
-import {NavLink} from "react-router-dom";
 import {Moon,Sun} from "lucide-react";
 
 const NAV_ITEMS=[
- {to:"/",label:"Home",end:true},
- {to:"/about",label:"About"},
- {to:"/works",label:"Works"},
- {to:"/contact",label:"Contact"}
+ {href:"#Home",label:"Home"},
+ {href:"#About",label:"About"},
+ {href:"#Portofolio",label:"Works"},
+ {href:"#Contact",label:"Contact"}
 ];
 
 const Navbar=()=>{
@@ -21,12 +20,7 @@ const Navbar=()=>{
 
  return <nav className="identity-nav" aria-label="Main navigation">
   <div className="nav-links">
-   {NAV_ITEMS.map(item=><NavLink
-    key={item.to}
-    to={item.to}
-    end={item.end}
-    className={({isActive})=>isActive?"active":""}
-   >{item.label}</NavLink>)}
+   {NAV_ITEMS.map(item=><a key={item.href} href={item.href}>{item.label}</a>)}
    <button
     className="theme-toggle"
     type="button"
