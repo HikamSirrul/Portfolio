@@ -809,3 +809,158 @@ html[data-theme="light"] #Contact {
 #Contact::before {
   content: none !important;
 }
+
+
+/* === Home hero: centered single-line identity with balanced lower columns === */
+#Home.identity-hero .hero-giant-name{
+  inset:9% 3% auto;
+  width:94%;
+  height:auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  font-size:clamp(54px,13vw,190px);
+  line-height:.9;
+  letter-spacing:-.09em;
+  white-space:nowrap;
+}
+#Home.identity-hero .hero-word-line{
+  display:block;
+  width:100%;
+  text-align:center;
+}
+#Home.identity-hero .hero-portrait{
+  right:50%;
+  transform:translateX(50%);
+  width:min(54%,680px);
+  height:82%;
+  bottom:0;
+}
+#Home.identity-hero .hero-copy{
+  left:5%;
+  right:auto;
+  bottom:7%;
+  width:min(35%,420px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+#Home.identity-hero .hero-copy p{
+  margin:0;
+  color:#c2cada;
+  font-size:clamp(13px,1.2vw,16px);
+  line-height:1.5;
+}
+#Home.identity-hero .hero-social{
+  justify-content:center;
+  align-items:center;
+  margin-top:18px;
+  gap:16px;
+}
+#Home.identity-hero .hero-social a{
+  display:grid;
+  place-items:center;
+  width:38px;
+  height:38px;
+  border:1px solid rgba(138,180,255,.28);
+  border-radius:50%;
+  background:rgba(23,107,255,.09);
+  transition:transform .25s ease,border-color .25s ease,background .25s ease;
+}
+#Home.identity-hero .hero-social a:hover{
+  transform:translateY(-3px);
+  border-color:rgba(59,130,255,.8);
+  background:rgba(23,107,255,.2);
+}
+#Home.identity-hero .hero-side-note{
+  right:5%;
+  left:auto;
+  bottom:7%;
+  width:min(35%,420px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#dce6f7;
+  font-size:clamp(12px,1.15vw,15px);
+  line-height:1.5;
+}
+#Home.identity-hero .hero-side-note .hero-cta{
+  justify-content:center;
+  align-items:center;
+  margin-top:14px;
+  padding:12px 21px;
+}
+html[data-theme="light"] #Home.identity-hero .hero-copy p{color:#263247}
+html[data-theme="light"] #Home.identity-hero .hero-side-note{color:#263247}
+html[data-theme="light"] #Home.identity-hero .hero-social{color:#27364f}
+@media(max-width:800px){
+  #Home.identity-hero{height:720px;min-height:720px}
+  #Home.identity-hero .hero-giant-name{
+    inset:10% 2% auto;
+    width:96%;
+    font-size:clamp(52px,10.8vw,88px);
+    letter-spacing:-.085em;
+  }
+  #Home.identity-hero .hero-portrait{
+    width:68%;
+    height:72%;
+    right:50%;
+    bottom:0;
+  }
+  #Home.identity-hero .hero-copy{
+    left:3%;
+    bottom:5%;
+    width:43%;
+  }
+  #Home.identity-hero .hero-side-note{
+    right:3%;
+    bottom:5%;
+    width:43%;
+    max-width:none;
+  }
+  #Home.identity-hero .hero-copy p{font-size:12px}
+  #Home.identity-hero .hero-side-note{font-size:11px}
+  #Home.identity-hero .hero-social{margin-top:12px;gap:10px}
+  #Home.identity-hero .hero-social a{width:34px;height:34px}
+}
+@media(max-width:520px){
+  #Home.identity-hero{height:760px;min-height:760px}
+  #Home.identity-hero .hero-giant-name{
+    inset:9% 2% auto;
+    width:96%;
+    font-size:clamp(38px,10vw,52px);
+    letter-spacing:-.075em;
+  }
+  #Home.identity-hero .hero-portrait{
+    width:94%;
+    height:65%;
+    bottom:13%;
+  }
+  #Home.identity-hero .hero-orbit-large{width:88vw;right:6%;top:22%}
+  #Home.identity-hero .hero-orbit-small{width:62vw;right:19%;top:31%}
+  #Home.identity-hero .hero-photo-glow{width:76vw;right:12%;top:30%}
+  #Home.identity-hero .hero-copy{
+    left:3%;
+    bottom:3.5%;
+    width:46%;
+  }
+  #Home.identity-hero .hero-side-note{
+    right:3%;
+    bottom:3.5%;
+    width:46%;
+  }
+  #Home.identity-hero .hero-copy p{font-size:10px}
+  #Home.identity-hero .hero-side-note{font-size:9px;line-height:1.4}
+  #Home.identity-hero .hero-cta{font-size:9px;padding:9px 12px;gap:5px}
+  #Home.identity-hero .hero-social{gap:7px;margin-top:9px}
+  #Home.identity-hero .hero-social a{width:30px;height:30px}
+  #Home.identity-hero .hero-social svg{width:14px;height:14px}
+}
+@media(prefers-reduced-motion:reduce){
+  #Home.identity-hero .hero-social a{transition:none}
+}
