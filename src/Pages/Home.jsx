@@ -27,7 +27,7 @@ const Home=()=>(
     <div className="hero-kicker">HI, I'M</div>
     <h1>Hikam <span>Sirrul Arifin</span></h1>
     <p>Full-Stack Web Developer<br/>&amp; IT Enthusiast</p>
-    <a className="hero-cta" href="/works">Explore My Works <ArrowUpRight size={15}/></a>
+    <a className="hero-cta" href="#Portofolio">Explore My Works <ArrowUpRight size={15}/></a>
     <div className="hero-social" aria-label="Social links">
      <a href="https://github.com/HikamSirrul" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={16}/></a>
      <a href="https://www.linkedin.com/in/hikamsrl/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={16}/></a>
