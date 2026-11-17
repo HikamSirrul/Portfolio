@@ -15,6 +15,8 @@ const Home=()=>(
    <meta property="og:type" content="website"/>
   </Helmet>
   <section id="Home" className="identity-hero" aria-label="Introduction">
+   <div className="hero-backdrop-orbit hero-orbit-large" aria-hidden="true"/>
+   <div className="hero-backdrop-orbit hero-orbit-small" aria-hidden="true"/>
    <div className="hero-giant-name" aria-label="Hikam Sirrul">
     <span className="hero-word-line hero-word-one">HIKAM SIRRUL</span>
    </div>
