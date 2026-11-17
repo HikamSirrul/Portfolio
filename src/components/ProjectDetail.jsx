@@ -77,7 +77,7 @@ const ProjectStats = ({ project }) => {
             {techStackCount}
           </div>
           <div className="text-[10px] md:text-xs text-gray-400">
-            Total Teknologi
+            Total Technologies
           </div>
         </div>
       </div>
@@ -94,7 +94,7 @@ const ProjectStats = ({ project }) => {
             {featuresCount}
           </div>
           <div className="text-[10px] md:text-xs text-gray-400">
-            Fitur Utama
+            Key Features
           </div>
         </div>
       </div>
@@ -106,9 +106,9 @@ const handleGithubClick = (githubLink) => {
   if (githubLink === "Private") {
     Swal.fire({
       icon: "info",
-      title: "Source Code Private",
-      text: "Maaf, source code untuk proyek ini bersifat privat.",
-      confirmButtonText: "Mengerti",
+      title: "Private Source Code",
+      text: "Sorry, the source code for this project is private.",
+      confirmButtonText: "Got it",
       confirmButtonColor: "#3085d6",
       background: document.documentElement.dataset.theme === "light" ? "#ffffff" : "#030014",
       color: document.documentElement.dataset.theme === "light" ? "#17243a" : "#ffffff",
@@ -171,7 +171,7 @@ const ProjectDetails = () => {
           content={
             project.Description
               ? project.Description.slice(0, 155)
-              : `Project ${project.Title} oleh Hikam Sirrul Arifin — Frontend Web Developer.`
+              : `Project ${project.Title} by Hikam Sirrul Arifin — Full-Stack Web Developer.`
           }
         />
         <meta name="robots" content="index, follow" />
