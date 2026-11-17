@@ -28,12 +28,19 @@ const Navbar=()=>{
  },[]);
  const scrollTo=(event,href)=>{
   event.preventDefault();
-  const target=document.querySelector(href);
+  const target=document.getElementById(href.slice(1));
   if(!target)return;
-  const navOffset=window.matchMedia("(max-width: 520px)").matches?68:84;
+  const navOffset=window.matchMedia("(max-width: 520px)").matches?76:96;
   const targetTop=target.getBoundingClientRect().top+window.scrollY-navOffset;
-  window.scrollTo({top:Math.max(0,targetTop),behavior:"smooth"});
   setActiveSection(href.slice(1));
+  window.history.replaceState(null,"",href);
+  window.scrollTo({top:Math.max(0,targetTop),behavior:"smooth"});
+  window.setTimeout(()=>{
+   const refreshed=document.getElementById(href.slice(1));
+   if(!refreshed)return;
+   const refreshedTop=refreshed.getBoundingClientRect().top+window.scrollY-navOffset;
+   window.scrollTo({top:Math.max(0,refreshedTop),behavior:"smooth"});
+  },180);
  };
  return <nav className="identity-nav" aria-label="Main navigation">
   <div className="nav-links">
