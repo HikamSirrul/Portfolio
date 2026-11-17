@@ -746,16 +746,17 @@ html[data-theme="light"] {
 html,
 body,
 #root,
-.public-page-content,
+.public-page-content {
+  background-color: var(--home-canvas-color) !important;
+  background-image: none !important;
+}
+
 #Home,
 #About,
 #Portofolio,
 #Contact {
   background-color: var(--home-canvas-color) !important;
-  background-image: var(--home-canvas-image) !important;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: scroll;
+  background-image: none !important;
 }
 
 /* Keep the same canvas on standalone pages (login, dashboard, 404,
