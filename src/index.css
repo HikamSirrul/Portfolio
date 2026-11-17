@@ -688,3 +688,39 @@ html[data-theme="light"] .welcome-orbit{border-color:rgba(23,107,255,.2)}
    drop-shadow(0 18px 34px rgba(23,107,255,.32))!important;
  }
 }
+
+
+/* === Unified page canvas: every route uses the same background as Home === */
+html,
+body,
+#root {
+  background: var(--site-bg) !important;
+}
+
+html[data-theme="dark"] {
+  --site-bg: #070a12;
+}
+
+html[data-theme="light"] {
+  --site-bg: #f1f5fc;
+}
+
+/* Keep the public sections on one continuous Home-colored canvas. */
+.public-page-content,
+#Home,
+#About,
+#Portofolio,
+#Contact {
+  background: transparent !important;
+}
+
+/* Standalone routes must use the same canvas in both themes. */
+.project-detail-page,
+#root > .min-h-screen.bg-gradient-to-br,
+#root > .flex.text-white {
+  background: var(--site-bg) !important;
+}
+
+html[data-theme="light"] .project-detail-page {
+  background: var(--site-bg) !important;
+}
