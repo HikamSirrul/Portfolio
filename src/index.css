@@ -390,3 +390,58 @@ html[data-theme="light"] #Portofolio .grid.grid-cols-2.md\\:grid-cols-3.lg\\:gri
 html[data-theme="light"] #Portofolio .grid.grid-cols-2.md\\:grid-cols-3.lg\\:grid-cols-6 span{color:#334155!important}
 #Home,#About,#Portofolio,#Contact{scroll-margin-top:84px}
 @media(max-width:520px){#Home,#About,#Portofolio,#Contact{scroll-margin-top:68px}}
+
+/* Electric-blue hero motion */
+@keyframes heroOrbitRotate{from{transform:translateX(-50%) rotate(0)}to{transform:translateX(-50%) rotate(360deg)}}
+@keyframes heroOrbitCounter{from{transform:translateX(-50%) rotate(360deg)}to{transform:translateX(-50%) rotate(0)}}
+@keyframes heroGlowPulse{0%,100%{opacity:.48;filter:blur(12px) scale(.94)}50%{opacity:.82;filter:blur(18px) scale(1.06)}}
+@keyframes heroPortraitFloat{0%,100%{translate:0 0}50%{translate:0 -9px}}
+@keyframes heroNameReveal{from{opacity:0;transform:translate3d(-24px,18px,0);filter:blur(8px)}to{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}}
+@keyframes heroCopyReveal{from{opacity:0;transform:translate3d(0,22px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@keyframes heroSweep{0%{transform:translateX(-120%) skewX(-18deg);opacity:0}18%{opacity:.5}55%{opacity:.16}100%{transform:translateX(220%) skewX(-18deg);opacity:0}}
+@keyframes heroStatusPulse{0%,100%{box-shadow:0 0 0 0 rgba(59,130,255,.42),0 0 12px #176bff}50%{box-shadow:0 0 0 7px rgba(59,130,255,0),0 0 18px #176bff}}
+#Home.identity-hero .hero-backdrop-orbit{transform-origin:center;animation:heroOrbitRotate 32s linear infinite}
+#Home.identity-hero .hero-orbit-small{animation:heroOrbitCounter 24s linear infinite}
+#Home.identity-hero .hero-photo-glow{animation:heroGlowPulse 6s ease-in-out infinite}
+#Home.identity-hero .hero-portrait img{animation:heroPortraitFloat 7s ease-in-out infinite}
+#Home.identity-hero .hero-word-line{animation:heroNameReveal .9s cubic-bezier(.2,.75,.2,1) both}
+#Home.identity-hero .hero-word-one{animation-delay:.12s}
+#Home.identity-hero .hero-word-two{animation-delay:.28s}
+#Home.identity-hero .hero-word-three{animation-delay:.44s}
+#Home.identity-hero .hero-copy>*{animation:heroCopyReveal .7s ease-out both}
+#Home.identity-hero .hero-copy>*:nth-child(1){animation-delay:.32s}
+#Home.identity-hero .hero-copy>*:nth-child(2){animation-delay:.43s}
+#Home.identity-hero .hero-copy>*:nth-child(3){animation-delay:.54s}
+#Home.identity-hero .hero-copy>*:nth-child(4){animation-delay:.65s}
+#Home.identity-hero .hero-copy>*:nth-child(5){animation-delay:.76s}
+#Home.identity-hero .hero-status-dot{animation:heroStatusPulse 2.2s ease-in-out infinite}
+#Home.identity-hero::after{content:"";position:absolute;z-index:4;top:0;bottom:0;left:0;width:24%;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(91,154,255,.13),rgba(255,255,255,.18),transparent);animation:heroSweep 8s ease-in-out 1.2s infinite}
+@media(prefers-reduced-motion:reduce){
+ #Home.identity-hero .hero-backdrop-orbit,#Home.identity-hero .hero-photo-glow,#Home.identity-hero .hero-portrait img,#Home.identity-hero .hero-word-line,#Home.identity-hero .hero-copy>*,#Home.identity-hero .hero-status-dot,#Home.identity-hero::after{animation:none!important;translate:none!important;filter:none}
+}
+/* High-contrast light theme for project detail */
+.project-detail-page{isolation:isolate;color:#f5f7fc}
+html[data-theme="light"] .project-detail-page{background:#f3f7ff!important;color:#14213a!important}
+html[data-theme="light"] .project-detail-page>div.fixed{opacity:.22}
+html[data-theme="light"] .project-detail-page .text-white,html[data-theme="light"] .project-detail-page .text-white\/90{color:#17243a!important}
+html[data-theme="light"] .project-detail-page .text-gray-300,html[data-theme="light"] .project-detail-page .text-gray-300\/90{color:#3d4c63!important}
+html[data-theme="light"] .project-detail-page .text-gray-400{color:#5c6b82!important}
+html[data-theme="light"] .project-detail-page h1{background-image:linear-gradient(100deg,#124fc4,#176bff 58%,#458dff)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important}
+html[data-theme="light"] .project-detail-page .bg-\\[\\#0a0a1a\\]{background:#e8effb!important}
+html[data-theme="light"] .project-detail-page .bg-white\\/5,html[data-theme="light"] .project-detail-page .bg-white\\/\\[0\\.02\\]{background:#e8effb!important}
+html[data-theme="light"] .project-detail-page .border-white\\/10,html[data-theme="light"] .project-detail-page .border-white\\/20{border-color:#c7d5ea!important}
+html[data-theme="light"] .project-detail-page .text-blue-300,html[data-theme="light"] .project-detail-page .text-blue-300\\/90{color:#1454c5!important}
+html[data-theme="light"] .project-detail-page .text-blue-200{color:#174b9d!important}
+html[data-theme="light"] .project-detail-page .text-purple-300{color:#5b43b5!important}
+html[data-theme="light"] .project-detail-page .text-purple-200{color:#49369c!important}
+html[data-theme="light"] .project-detail-page .text-blue-400{color:#176bff!important}
+html[data-theme="light"] .project-detail-page .bg-blue-500\\/20{background:rgba(23,107,255,.13)!important}
+html[data-theme="light"] .project-detail-page .bg-purple-500\\/20{background:rgba(105,78,190,.13)!important}
+html[data-theme="light"] .project-detail-page a.group{background:#e8effb!important;border-color:#b9cbea!important;color:#174b9d!important}
+html[data-theme="light"] .project-detail-page a.group:hover{background:#dce8fb!important}
+html[data-theme="light"] .project-detail-page a.group span{color:inherit!important}
+html[data-theme="light"] .project-detail-page li span{color:#34445d!important}
+html[data-theme="light"] .project-detail-page .bg-white\\/\\[0\\.02\\] h3{color:#17243a!important}
+html[data-theme="light"] .project-detail-page .bg-white\\/\\[0\\.02\\] li:hover{background:#dce8fb!important}
+html[data-theme="light"] .project-detail-page .bg-white\\/\\[0\\.02\\] li:hover span{color:#17243a!important}
+@media(max-width:640px){#Home.identity-hero .hero-portrait img{animation-duration:8s}#Home.identity-hero::after{width:38%}}
