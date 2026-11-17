@@ -724,3 +724,60 @@ html[data-theme="light"] {
 html[data-theme="light"] .project-detail-page {
   background: var(--site-bg) !important;
 }
+
+
+/* === Exact Home canvas shared by every page and route === */
+:root {
+  --home-canvas-color: #05060c;
+  --home-canvas-image:
+    radial-gradient(ellipse at 73% 45%, rgba(23,107,255,.20), transparent 39%),
+    radial-gradient(ellipse at 4% 85%, rgba(23,107,255,.12), transparent 33%);
+}
+
+html[data-theme="light"] {
+  --home-canvas-color: #f9fbff;
+  --home-canvas-image:
+    radial-gradient(ellipse at 73% 45%, rgba(23,107,255,.14), transparent 39%),
+    radial-gradient(ellipse at 4% 85%, rgba(23,107,255,.08), transparent 33%);
+}
+
+/* The document canvas and every main public section use the identical
+   base color and gradient layers used by the Home hero. */
+html,
+body,
+#root,
+.public-page-content,
+#Home,
+#About,
+#Portofolio,
+#Contact {
+  background-color: var(--home-canvas-color) !important;
+  background-image: var(--home-canvas-image) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+/* Keep the same canvas on standalone pages (login, dashboard, 404,
+   and project details), without their former competing page gradients. */
+#root > .min-h-screen,
+#root > .flex.text-white,
+.project-detail-page {
+  background-color: var(--home-canvas-color) !important;
+  background-image: var(--home-canvas-image) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-detail-page > .fixed.inset-0 {
+  display: none !important;
+}
+
+/* Reuse the exact same glow treatment behind every public section. */
+#Home.identity-hero::before,
+#About::before,
+#Portofolio::before,
+#Contact::before {
+  background: var(--home-canvas-image) !important;
+  opacity: 1 !important;
+}
