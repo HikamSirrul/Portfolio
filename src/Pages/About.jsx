@@ -229,8 +229,7 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-        Saya adalah lulusan S1 Teknik Informatika yang memiliki minat dalam pengembangan website.
-        Saya berupaya menciptakan aplikasi web yang responsif, fungsional, dan menarik serta memberikan solusi terbaik dalam setiap proyek yang saya kerjakan. </p>
+        I am an Informatics Engineering graduate with a strong interest in web development. I strive to build responsive, functional, and engaging web applications while delivering effective solutions through every project I work on. </p>
 
                {/* Quote Section */}
       <div 
