@@ -1266,3 +1266,19 @@ html[data-theme="light"] #Home.identity-hero .hero-social{color:#27364f}
     -webkit-text-stroke:2.6px #ffffff!important;
   }
 }
+
+/* === Restore natural photo colors on Home and About pages === */
+#Home.identity-hero .hero-portrait img{
+  filter:contrast(1.04) drop-shadow(0 12px 25px rgba(0,0,0,.22))!important;
+}
+#About .w-72.h-72 img,
+#About img{
+  filter:none!important;
+}
+html[data-theme="light"] #Home.identity-hero .hero-portrait img{
+  filter:contrast(1.02) drop-shadow(0 12px 25px rgba(15,35,75,.14))!important;
+}
+html[data-theme="light"] #About .w-72.h-72 img,
+html[data-theme="light"] #About img{
+  filter:none!important;
+}
