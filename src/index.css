@@ -1241,3 +1241,28 @@ html[data-theme="light"] #Home.identity-hero .hero-social{color:#27364f}
   -webkit-text-fill-color:#05060c!important;
   -webkit-text-stroke:1.6px #f8fafc!important;
 }
+
+
+/* === Fine-tune hero title against the viewport, not the hero's own height === */
+@media (min-width:801px){
+  #Home.identity-hero .hero-giant-name{
+    top:calc(40vh - 76px)!important;
+    inset-block-start:calc(40vh - 76px)!important;
+    transform:translateY(-50%)!important;
+    -webkit-text-stroke:3.2px #ffffff!important;
+  }
+  #Home.identity-hero .hero-giant-name .hero-word-line{
+    -webkit-text-stroke:3.2px #ffffff!important;
+  }
+}
+@media (max-width:800px){
+  #Home.identity-hero .hero-giant-name{
+    top:40%!important;
+    inset-block-start:40%!important;
+    transform:translateY(-50%)!important;
+    -webkit-text-stroke:2.6px #ffffff!important;
+  }
+  #Home.identity-hero .hero-giant-name .hero-word-line{
+    -webkit-text-stroke:2.6px #ffffff!important;
+  }
+}
