@@ -1310,17 +1310,12 @@ html[data-theme="light"] #About img{
 
 /* === Keep the original Welcome Screen title in Light Mode === */
 html[data-theme="light"] .welcome-screen .welcome-title{
-  color:#f8fafc!important;
-  -webkit-text-fill-color:#f8fafc!important;
+  color:#05060c!important;
+  -webkit-text-fill-color:#05060c!important;
   -webkit-text-stroke:0!important;
 }
 html[data-theme="light"] .welcome-screen .welcome-title>span{
   color:#4b8dff!important;
   -webkit-text-fill-color:#4b8dff!important;
-  -webkit-text-stroke:0!important;
-}
-html[data-theme="light"] .welcome-screen .welcome-title .welcome-title-period{
-  color:#b7d0ff!important;
-  -webkit-text-fill-color:#b7d0ff!important;
   -webkit-text-stroke:0!important;
 }
