@@ -1207,3 +1207,20 @@ html[data-theme="light"] #Home.identity-hero .hero-social{color:#27364f}
   background:none!important;
   opacity:0!important;
 }
+
+
+/* === Vertically center the hero identity within the visible desktop page === */
+@media (min-width:801px){
+  #Home.identity-hero .hero-giant-name{
+    top:calc(50% - 11.5vh)!important;
+    inset-block-start:calc(50% - 11.5vh)!important;
+    transform:translateY(-50%)!important;
+  }
+}
+@media (max-width:800px){
+  #Home.identity-hero .hero-giant-name{
+    top:50%!important;
+    inset-block-start:50%!important;
+    transform:translateY(-50%)!important;
+  }
+}
