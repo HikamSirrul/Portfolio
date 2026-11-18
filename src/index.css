@@ -1282,3 +1282,27 @@ html[data-theme="light"] #About .w-72.h-72 img,
 html[data-theme="light"] #About img{
   filter:none!important;
 }
+
+/* === Welcome title lettering: black fill with matching outlined strokes === */
+.welcome-screen .welcome-title{
+  color:#05060c!important;
+  -webkit-text-fill-color:#05060c!important;
+  -webkit-text-stroke:3.2px #ffffff!important;
+  paint-order:stroke fill;
+}
+.welcome-screen .welcome-title>span,
+.welcome-screen .welcome-title .welcome-title-period{
+  color:#05060c!important;
+  -webkit-text-fill-color:#05060c!important;
+  -webkit-text-stroke:3.2px #4b8dff!important;
+  paint-order:stroke fill;
+}
+@media(max-width:800px){
+  .welcome-screen .welcome-title{
+    -webkit-text-stroke:2.6px #ffffff!important;
+  }
+  .welcome-screen .welcome-title>span,
+  .welcome-screen .welcome-title .welcome-title-period{
+    -webkit-text-stroke:2.6px #4b8dff!important;
+  }
+}
