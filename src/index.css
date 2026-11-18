@@ -1224,3 +1224,20 @@ html[data-theme="light"] #Home.identity-hero .hero-social{color:#27364f}
     transform:translateY(-50%)!important;
   }
 }
+
+
+/* === Hero title: center at 40% height with black fill and white letter outline === */
+#Home.identity-hero .hero-giant-name{
+  top:40%!important;
+  inset-block-start:40%!important;
+  transform:translateY(-50%)!important;
+  color:#05060c!important;
+  -webkit-text-fill-color:#05060c!important;
+  -webkit-text-stroke:1.6px #f8fafc!important;
+  paint-order:stroke fill;
+}
+#Home.identity-hero .hero-giant-name .hero-word-line{
+  color:#05060c!important;
+  -webkit-text-fill-color:#05060c!important;
+  -webkit-text-stroke:1.6px #f8fafc!important;
+}
