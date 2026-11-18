@@ -51,7 +51,7 @@ const WelcomeScreen=({onLoadingComplete})=>{
      transition={{duration:1,delay:.48,ease:[.16,1,.3,1]}}
     >
      WELCOME TO MY
-     <span>DIGITAL SPACE<span className="welcome-title-period">.</span></span>
+     <span>DIGITAL SPACE</span>
     </motion.h1>
     <motion.p
      className="welcome-subtitle"
